@@ -450,3 +450,18 @@ body {
     padding: 20px;
   }
 }
+
+/* Experience section styling */
+#experience {
+  scroll-margin-top: 80px;
+}
+
+/* Timeline bullet animation */
+.experience-item {
+  position: relative;
+}
+
+.experience-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
