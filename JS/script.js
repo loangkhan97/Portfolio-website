@@ -30,12 +30,12 @@ window.addEventListener("scroll", () => {
 });
 
 
-// Experience section scroll animation
+// Animate experience section on scroll
 document.addEventListener("DOMContentLoaded", () => {
-  const experienceItems = document.querySelectorAll(".experience-item");
+  const timelineItems = document.querySelectorAll(".timeline-item");
 
-  const revealOnScroll = () => {
-    experienceItems.forEach((item) => {
+  const showTimelineItems = () => {
+    timelineItems.forEach((item) => {
       const rect = item.getBoundingClientRect();
       if (rect.top < window.innerHeight - 100) {
         item.classList.add("opacity-100", "translate-y-0");
@@ -44,6 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Run once on load
+  window.addEventListener("scroll", showTimelineItems);
+  showTimelineItems();
 });
