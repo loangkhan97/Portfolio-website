@@ -28,3 +28,22 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+// Experience section scroll animation
+document.addEventListener("DOMContentLoaded", () => {
+  const experienceItems = document.querySelectorAll(".experience-item");
+
+  const revealOnScroll = () => {
+    experienceItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        item.classList.add("opacity-100", "translate-y-0");
+        item.classList.remove("opacity-0", "translate-y-10");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Run once on load
+});
