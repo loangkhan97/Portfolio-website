@@ -335,3 +335,118 @@ body {
     font-size: 0.8rem;
   }
 }
+
+/* ================= SKILLS SECTION ================= */
+.skills {
+  padding: 100px 10%;
+  background: #0F172A;
+  color: #F9FAFB;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #3B82F6;
+  margin-bottom: 10px;
+  animation: fadeInDown 1.2s ease;
+}
+
+.section-subtitle {
+  color: #E2E8F0;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.skill-category {
+  background: #1E293B;
+  border-radius: 20px;
+  padding: 25px 30px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  animation: fadeInUp 1.5s ease;
+  transition: 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.35);
+}
+
+.skill-category h3 {
+  font-size: 1.2rem;
+  color: #3B82F6;
+  margin-bottom: 20px;
+}
+
+.skill-category h3 i {
+  margin-right: 8px;
+}
+
+/* Skill Bars */
+.skill-bar {
+  position: relative;
+  background: #334155;
+  border-radius: 10px;
+  height: 8px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, #14B8A6);
+  border-radius: 10px;
+  width: 0;
+  animation: growBar 2s ease forwards;
+}
+
+.skill-bar p {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  font-size: 0.9rem;
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes growBar {
+  from { width: 0; }
+  to { width: var(--width); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 768px) {
+  .skills {
+    padding: 70px 6%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .skill-category {
+    padding: 20px;
+  }
+}
