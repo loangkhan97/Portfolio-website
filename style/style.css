@@ -11,8 +11,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  /*background: linear-gradient(135deg, #0F172A, #1E293B); */
-  background-color: white;
+  background: linear-gradient(135deg, #0F172A, #1E293B);
+
   color: #F9FAFB;
   overflow-x: hidden;
 }
