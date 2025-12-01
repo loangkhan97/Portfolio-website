@@ -47,3 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", showTimelineItems);
   showTimelineItems();
 });
+
